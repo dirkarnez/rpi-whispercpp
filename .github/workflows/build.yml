@@ -26,4 +26,9 @@ jobs:
             && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
             && echo "start" \
             && lsb_release -a \
-            && pip install whispercpp
+            && cd ~ \
+            && mkdir rpi-whispercpp \
+            && cd rpi-whispercpp \
+            && python3 -m venv .venv \
+            && source .venv/bin/activate \
+            && pip3 install whispercpp
