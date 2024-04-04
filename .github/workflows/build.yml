@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-          
+      
       - uses: pguyot/arm-runner-action@v2.5.2
         id: build_image
         with:
@@ -26,7 +26,6 @@ jobs:
             && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
             && echo "start" \
             && lsb_release -a \
-            && cd ~ \
             && mkdir rpi-whispercpp \
             && cd rpi-whispercpp \
             && python3 -m venv .venv \
